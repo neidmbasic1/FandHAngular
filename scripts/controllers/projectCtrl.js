@@ -7,5 +7,4 @@
 
 
 	app.controller("ProjectCtrl",ProjectCtrl);
-    ProjectCtrl.$inject = ['$scope', '$rootScope', '$http', 'DataService', '$log', '$modal'];
 }());

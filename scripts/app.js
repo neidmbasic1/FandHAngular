@@ -1,12 +1,9 @@
-/**
- * Created by Layla on 20-Apr-15.
- */
 (function(){
 
     var app = angular.module("FandH", ["ngRoute", "ngCookies" ]);
 
     app.constant("FandHConfig", {
-        source: "http://localhost:11330/api/",
+        source: "http://localhost:11330/api/"
     });
 
     app.config(function($routeProvider, $locationProvider) { //sluzi za pozivanje stranice; routeProvider je jedan od objekata iz ngRoute sistema, ima zadatak da donese rutu u f-ju
@@ -27,7 +24,7 @@
                 // .when("/annual", {templateUrl: "views/annualReport.html", controller: "AnnualCtrl"})
                 // .when("/personal", {templateUrl: "views/personalReport.html", controller: "DiaryCtrl"})
                 .otherwise({redirectTo: "/main"});
-    })
+    });
         // .run(function($rootScope, $location, $cookies){
         //     $rootScope.$on("$routeChangeStart", function(event, next, current){
         //         if($rootScope.authenticated == null) {
