@@ -2,6 +2,15 @@
 <p>MAIN</p>
 
 {{cita}}
+
+    <p ng-show="$root.authenticated">Welcome {{$root.currentUser}}</p>
+    <ul ng-repeat="program in programs">
+        <li>{{program.Id}}</li>
+        <li>{{program.Name}}</li>
+        <li>{{program.Description}}</li>
+    </ul>
+
+
 <!--
 
 

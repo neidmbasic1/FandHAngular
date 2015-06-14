@@ -9,10 +9,11 @@
         loadPrograms();
         function loadPrograms() {
             //$rootScope.showLoader = true;
-            DataService.list("users").then(function(response){
+            DataService.list("programs").then(function(response){
                     console.log('response');
                     console.log(response);
                     $scope.programs = response.data;
+                    console.log(response.data);
                     //$rootScope.showLoader = false;
                 },
                 function(reason){
