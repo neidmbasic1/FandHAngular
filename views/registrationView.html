@@ -1,0 +1,17 @@
+<h2 class="podnaslovi">Register</h2>
+<div class="mainContainer">
+    <div class="row">
+        <div class="row" style="padding: 10px; padding-top: 10px">
+
+            <form>
+                <p><input type="text" placeholder="Username" ng-model="edit.Username"></p>
+                <p><input type="text" placeholder="Password" ng-model="edit.Password"></p>
+                <p><input type="text" placeholder="e-Mail" ng-model="edit.Email"></p>
+            </form>
+
+            <input class="btn btn-primary" type="submit" ng-click="updateUser(edit)" value="Register">
+            <button class="btn btn-warning" ng-click="clearData()">Cancel</button>
+
+        </div>
+    </div>
+</div>
