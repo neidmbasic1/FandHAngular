@@ -20,10 +20,12 @@
         };
 
         function tryLogin(user) {
-
+            console.log('tryLogin');
             LoginService.login(user).then(
 
                 function (response) {
+                    console.log('response');
+                    console.log(response);
                     LoginService.clearCredentials();
                     if(user.remember) LoginService.setCredentials(user);
                     $rootScope.currentUser = response.data;
@@ -32,6 +34,8 @@
                 },
 
                 function(reason) {
+                    console.log('reason');
+                    console.log(reason);
                     LoginService.clearCredentials();
                     $rootScope.currentuser = null;
                     $rootScope.authenticated = null;

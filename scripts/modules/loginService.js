@@ -16,7 +16,7 @@
                 $http.defaults.headers.common["Authorization"] = 'Basic ' + encode(user.name + ":" + user.pass);
                 return $http({
                     method: "get",
-                    url: source + "login"
+                    url: source + "auth"
                 })
             },
 

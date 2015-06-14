@@ -16,6 +16,7 @@
                                 <i class="text-muted glyphicon glyphicon-user"></i>
                             </span>
                         <input type="text" id="username" name="username" class="form-control" placeholder="Name" ng-model="user.name">
+                    </input>
                     </div>
                 </div>
                 <div class="form-group">
@@ -23,11 +24,12 @@
                             <span class="input-group-addon">
                                 <i class="text-muted glyphicon glyphicon-asterisk"></i>
                             </span>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="Password" ng-model="user.pass">
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Password" ng-model="user.pass"></input>
                     </div>
                     <div class="checkbox-inline">
                         <br>
                         <label class=""><input type="checkbox" ng-change="" ng-model="user.remember"/> Remember me</label>
+                        </br>
 
                     </div>
                 </div>
@@ -42,46 +44,4 @@
     </div>
 </section>
 
-<!--
-
-<div class="container login-container" ng-show="!authenticated">
-    <div class="row">
-        <div class="col-md-4 col-md-offset-4">
-            <div class="panel panel-default">
-                <div class="panel-heading"> <strong class="">Login</strong>
-                </div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Name</label>
-                            <div class="col-sm-9">
-                                <input class="form-control" id="name" placeholder="Name" required="required" type="text" ng-model="user.name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-3 control-label">Password</label>
-                            <div class="col-sm-9">
-                                <input class="form-control" id="password" placeholder="Password" required="required" type="password" ng-model="user.pass">
-                                <a class="pull-right" href="#">Forgot password?</a>
-                            </div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <div class="col-sm-offset-1 col-sm-9">
-                                <div class="checkbox">
-                                    <label class="">
-                                        <input class="pull-left" type="checkbox" ng-model="user.remember">Remember me</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group last">
-                            <div class="buttonHolder">
-                                <input type="submit" id="login-btn" class="btn btn-primary btn-md btn-block" value="Login" ng-click="identify(user)"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
--->
