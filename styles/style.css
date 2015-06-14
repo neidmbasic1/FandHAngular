@@ -1,0 +1,24 @@
+/* login css */
+.naslov{
+    color: #A1BEE6;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    text-align: center;
+}
+.logintext{
+    color: #337ab7;
+    font-size: 26px;
+}
+
+body {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 14px;
+    margin: 0;
+    padding-top: 84px;
+    padding-bottom: 42px;
+}
+
+.container {
+    margin-bottom: 60px;
+
+}
