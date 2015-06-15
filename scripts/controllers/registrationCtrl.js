@@ -1,7 +1,7 @@
 (function () {
 
     var app = angular.module("FandH");
-    
+
     var RegistrationCtrl = function ($scope, $rootScope, $http, DataService) {
 
         /*

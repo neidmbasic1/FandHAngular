@@ -1,17 +1,10 @@
-/**
- * Created by Layla on 21-Apr-15.
- */
-
 (function () {
 
     var app = angular.module("FandH");
 
     var LogInCtrl = function ($scope, $rootScope, LoginService, $location) {
 
-  
-    $scope.user = LoginService.getCredentials();
-
-        //tryLogin($scope.user);
+        $scope.user = LoginService.getCredentials();
 
         $scope.message = "Provide your credentials.";
 
@@ -30,6 +23,7 @@
                     if(user.remember) LoginService.setCredentials(user);
                     $rootScope.currentUser = response.data;
                     $rootScope.authenticated = true;
+                    $rootScope.confirmed = $rootScope.currentUser.ConfirmedUser;
                     $location.path("/main");
                 },
 
@@ -42,19 +36,7 @@
                     $scope.message = "Bad credentials! Please try again.";
                 }
             )}
-    
 
-    // var LogoutCtrl = function ($scope, $rootScope, $location, LoginService) {
-
-    //     var clearAll = function(obj){
-
-    //         $rootScope.currentUser = null;
-    //         $rootScope.authenticated = null;
-    //         $location.path("/login");
-    //     }
-    //     LoginService.logout().then(clearAll, clearAll);
-
-    // };
     };
     app.controller("LogInCtrl",LogInCtrl);
 }());
