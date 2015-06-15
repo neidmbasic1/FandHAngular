@@ -44,17 +44,17 @@
             )}
     
 
-    // var LogoutCtrl = function ($scope, $rootScope, $location, LoginService) {
+     var LogoutCtrl = function ($scope, $rootScope, $location, LoginService) {
 
-    //     var clearAll = function(obj){
+         var clearAll = function(obj){
 
-    //         $rootScope.currentUser = null;
-    //         $rootScope.authenticated = null;
-    //         $location.path("/login");
-    //     }
-    //     LoginService.logout().then(clearAll, clearAll);
+             $rootScope.currentUser = null;
+             $rootScope.authenticated = null;
+             $location.path("/login");
+         }
+         LoginService.logout().then(clearAll, clearAll);
 
-    // };
+     };
     };
     app.controller("LogInCtrl",LogInCtrl);
 }());

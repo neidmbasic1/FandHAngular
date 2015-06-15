@@ -1,4 +1,5 @@
 /* login css */
+
 .naslov{
     color: #A1BEE6;
     margin-bottom: 30px;
@@ -14,8 +15,8 @@ body {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-size: 14px;
     margin: 0;
-    padding-top: 84px;
-    padding-bottom: 42px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .container {

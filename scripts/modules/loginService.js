@@ -23,7 +23,7 @@
             logout: function(){
                 return $http({
                     method: "get",
-                    url: source + "login/1"
+                    url: source + "auth/1"
                 })
             },
 
