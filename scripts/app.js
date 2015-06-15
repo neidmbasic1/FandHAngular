@@ -13,7 +13,7 @@
                 .when("/login", {templateUrl: "views/login.html", controller: "LogInCtrl"})
                 .when("/registration", {templateUrl: "views/registrationView.html", controller: "RegistrationCtrl"})
                  .when("/logout", {templateUrl: "views/login.html", controller: "LogoutCtrl"})
-                // .when("/diary", {templateUrl: "views/diary.html", controller: "DiaryCtrl" })
+                .when("/trainings", {templateUrl: "views/trainings.html", controller: "TrainingsCtrl" })
                 // .when("/diary/:id", {templateUrl: "views/diary.html", controller: "DiaryCtrl" })
                 // .when("/projects", {templateUrl: "views/projectView.html", controller: "ProjectCtrl"})
                 // .when("/persons", {templateUrl: "views/personView.html", controller: "PersonCtrl"})
