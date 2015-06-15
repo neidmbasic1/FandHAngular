@@ -42,14 +42,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Programs <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="#/main">Programs <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">Trainings</a></li>
                     <li><a href="#">Exercises</a></li>
                     <li><a href="#">Diets</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-show="!$root.authenticated"><a href="#/login">LogIn</a></li>
-                    <li ng-show="!$root.authenticated"><a href="#">Sign Up</a></li>
+                    <li ng-show="!$root.authenticated"><a href="#/registration">Sign Up</a></li>
                     <li ng-show="$root.authenticated"><a href="#">{{$root.currentuUser.Username}}</a></li>
                     <li ng-show="$root.authenticated"><a href="#/logout">Log out</a></li>
                 </ul>

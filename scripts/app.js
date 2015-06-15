@@ -24,13 +24,13 @@
                 // .when("/annual", {templateUrl: "views/annualReport.html", controller: "AnnualCtrl"})
                 // .when("/personal", {templateUrl: "views/personalReport.html", controller: "DiaryCtrl"})
                 .otherwise({redirectTo: "/main"});
-    })
-        .run(function($rootScope, $location, $cookies){
-             $rootScope.$on("$routeChangeStart", function(event, next, current){
-                 if($rootScope.authenticated == null) {
-                     if(next.templateUrl != "views/login.html") //ako nije posao da se loguje preusmeriti ga na login
-                         $location.path("/login");
-                 }
-             })
-        });
+    });
+        //.run(function($rootScope, $location, $cookies){
+        //     $rootScope.$on("$routeChangeStart", function(event, next, current){
+        //         if($rootScope.authenticated == null) {
+        //             if(next.templateUrl != "views/login.html") //ako nije posao da se loguje preusmeriti ga na login
+        //                 $location.path("/login");
+        //         }
+        //     })
+        //});
 }());

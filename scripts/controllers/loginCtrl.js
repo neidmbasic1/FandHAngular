@@ -36,18 +36,22 @@
                     $scope.message = "Bad credentials! Please try again.";
                 }
             )}
+
+    };
+    app.controller("LogInCtrl",LogInCtrl);
      var LogoutCtrl = function ($scope, $rootScope, $location, LoginService) {
 
          var clearAll = function(obj){
 
              $rootScope.currentUser = null;
              $rootScope.authenticated = null;
-             $location.path("/login");
+             $location.path("/main");
          }
          LoginService.logout().then(clearAll, clearAll);
 
      };
+    app.controller("LogoutCtrl",LogoutCtrl);
 
-    };
-    app.controller("LogInCtrl",LogInCtrl);
+
+
 }());
