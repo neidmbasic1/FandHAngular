@@ -1,18 +1,16 @@
-/**
- * Created by Pasa on 4/21/2015.
- */
+
 (function(){
 
     var app = angular.module("FandH");
 
     var LoginService = function($http, $cookies, FandHConfig) {
 
-        //var source = "http://localhost:14720/api/";
         var source = FandHConfig.source;
 
         return {
             login: function (user) {
 
+                console.log('tryLogin');
                 $http.defaults.headers.common["Authorization"] = 'Basic ' + encode(user.name + ":" + user.pass);
                 return $http({
                     method: "get",
