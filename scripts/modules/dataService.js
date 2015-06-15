@@ -15,9 +15,9 @@
 
             post: function(set, obj) { return $http( { method: "post", url: source + set, data: obj} ); },
 
-            put: function(set, id, obj) { return $http( { method: "post", url: source + set + "/" + id, data: obj}); },
+            put: function(set, id, obj) { return $http( { method: "put", url: source + set + "/" + id, data: obj}); },
 
-            delete: function(set, id) {return $http({ method: "post", url: source + set + "/-" + id, data: null});}
+            delete: function(set, id) {return $http({ method: "delete", url: source + set + "/" + id, data: null});}
         }
     };
 

@@ -4,7 +4,7 @@
     var app = angular.module("FandH");
 
     var MainCtrl = function($scope,DataService) {
-
+        $scope.add=false;
         $scope.cita = "cita controller";
         loadPrograms();
         function loadPrograms() {
@@ -16,13 +16,38 @@
                     console.log(response.data);
                     //$rootScope.showLoader = false;
                 },
-                function(reason){
+                    function(reason){
                     console.log('reason');
                     console.log(reason);
                     //$rootScope.showLoader = false;
                     $scope.message = "Error fetching data";
                 });
         }
+        $scope.addProgram = function(program) {
+            DataService.post("programs",program).then(function(response){
+                    console.log('response');
+                    console.log(response);
+                    $scope.add = false;
+                    loadPrograms();
+                },
+                function(reason){
+                    console.log('reason');
+                    console.log(reason);
+                });
+        };
+
+        $scope.deleteProgram = function(id) {
+            console.log(id);
+            DataService.delete("programs",id).then(function(response){
+                    console.log('response');
+                    console.log(response);
+                    loadPrograms();
+                },
+                function(reason){
+                    console.log('reason');
+                    console.log(reason);
+                });
+        };
     };
     app.controller("MainCtrl",MainCtrl);
 }());
