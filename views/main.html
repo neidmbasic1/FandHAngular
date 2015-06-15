@@ -36,6 +36,20 @@
 <!--
 
 
+<div class="span4">
+              <div class="well">
+                  <h2 translate="TITLE" class="ng-scope">Hello</h2>
+                  <p translate="FOO" class="ng-scope">This is a paragraph.</p>
+              </div>
+              <div ng-controller="Ctrl" class="ng-scope">
+                <button class="btn ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">english</button>
+                <button class="btn ng-scope" ng-click="changeLanguage('de')" translate="BUTTON_LANG_DE">german</button>
+              </div>
+            </div>
+
+
+
+
 <label ng-repeat="role in roles">
     <input
         type = "checkbox"

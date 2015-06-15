@@ -2,4 +2,25 @@
 
     <p>{{program.Name}}</p>
     <p>{{program.Description}}</p>
+
+    <div ng-show="!edit" class="text-center form-group">
+        <input type="submit" class="btn btn-success btn-lg btn-block" value="Edit" ng-click="edit=true"/>
+    </div>
+    <div ng-show="edit">
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input ng-model="program.Name" placeholder="{{program.Description}}" type="name" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+            <textarea ng_model="program.Description" placeholder="{{program.Description}}"  type="description" class="form-control" id="description">
+
+            </textarea>
+            </div>
+
+            <button ng-click="editProgram(program)" type="submit" class="btn btn-default">Save</button>
+            <button ng-click="edit=false" class="btn btn-default">Cancel</button>
+        </form>
+    </div>
 </div>
