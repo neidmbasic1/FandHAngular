@@ -2,7 +2,7 @@
 
     var app = angular.module("FandH");
 
-    var RegistrationCtrl = function ($scope, $rootScope, $http, DataService) {
+    var RegistrationCtrl = function ($scope, $rootScope, $http, DataService,$location) {
 
         /*
         loadUsers();
@@ -22,15 +22,11 @@
         $scope.updateUser = function(updatedUser){
             $scope.edit = updatedUser;
             var promise;
-            if($scope.edit.id == 0) {
+
                 promise = DataService.post("users", $scope.edit);
                 clearData();
-            }
-            else {
-                promise = DataService.put("users", $scope.edit.id, $scope.edit);
-                clearData();
-            }
-            promise.then(function(response){ loadUsers() },
+
+            promise.then(function(response){ $location.path("/login"); },
                 function(reason){ $scope.message = "Error fetching data"});
         };
 

@@ -3,7 +3,7 @@
     <p>{{program.Name}}</p>
     <p>{{program.Description}}</p>
 
-    <div ng-show="!edit" class="text-center form-group">
+    <div ng-show="!edit && $root.authenticated" class="text-center form-group">
         <input type="submit" class="btn btn-success btn-lg btn-block" value="Edit" ng-click="edit=true"/>
     </div>
     <div ng-show="edit">

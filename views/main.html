@@ -4,7 +4,7 @@
 {{cita}}
 
 
-    <div ng-show="!add" class="text-center form-group">
+    <div ng-show="!add && $root.authenticated" class="text-center form-group">
         <input type="submit" class="btn btn-success btn-lg btn-block" value="+" ng-click="add=true"/>
     </div>
 <div ng-show="add">
@@ -29,7 +29,7 @@
         <li>{{program.Id}} <a href="#/programdetail/{{program.Id}}">Show</a> </li>
         <li>{{program.Name}}</li>
         <li>{{program.Description}}</li>
-        <button ng-click="deleteProgram(program.Id)" class="btn btn-danger">-</button>
+        <button ng-show="$root.authenticated" ng-click="deleteProgram(program.Id)" class="btn btn-danger">-</button>
     </ul>
 
 
