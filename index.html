@@ -23,10 +23,7 @@
     <script src="scripts/controllers/dietsCtrl.js"></script>
     <script src="scripts/controllers/programDetailCtrl.js"></script>
 
-
     <script src="scripts/controllers/headerCtrl.js"></script>
-
-
 
     <script src="scripts/modules/loginService.js"></script>
     <script src="scripts/modules/dataService.js"></script>
@@ -60,7 +57,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li ng-show="!$root.authenticated"><a href="#/login">LogIn</a></li>
                     <li ng-show="!$root.authenticated"><a href="#/registration">Sign Up</a></li>
-                    <li ng-show="$root.authenticated"><a href="#">{{$root.currentuUser.Username}}</a></li>
+                    <li ng-show="$root.authenticated" class="welcome"><a href="#">Welcome, {{$root.currentUser.Username}}!</a></li>
                     <li ng-show="$root.authenticated"><a href="#/logout">Log out</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -69,8 +66,10 @@
     <!--</div>-->
 </header>
 
-    <div class="container" ng-view> </div>
-
+<div class="container" ng-view> </div>
+<div id="loader" ng-show="showLoader">
+    <img id="spinner" src="images/spinner.gif"/>
+</div>
 
 </body>
 </html>

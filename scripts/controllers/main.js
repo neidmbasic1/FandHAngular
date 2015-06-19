@@ -5,21 +5,22 @@
 
     var MainCtrl = function($scope,DataService) {
         $scope.add=false;
-        $scope.cita = "cita controller";
+
         loadPrograms();
+
         function loadPrograms() {
-            //$rootScope.showLoader = true;
+            $rootScope.showLoader = true;
             DataService.list("programs").then(function(response){
                     console.log('response');
                     console.log(response);
                     $scope.programs = response.data;
                     console.log(response.data);
-                    //$rootScope.showLoader = false;
+                    $rootScope.showLoader = false;
                 },
                     function(reason){
                     console.log('reason');
                     console.log(reason);
-                    //$rootScope.showLoader = false;
+                    $rootScope.showLoader = false;
                     $scope.message = "Error fetching data";
                 });
         }
