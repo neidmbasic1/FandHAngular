@@ -3,7 +3,7 @@
 
     var app = angular.module("FandH");
 
-    var MainCtrl = function($scope,DataService) {
+    var ProgramCtrl = function($scope,DataService, $rootScope) {
         $scope.add=false;
 
         loadPrograms();
@@ -24,7 +24,21 @@
                     $scope.message = "Error fetching data";
                 });
         }
+        /*
+        $scope.ifAuthor = function(program) {
+            console.log('program.AuthorId');
+            console.log(program.AuthorId);
+            if(program.AuthorId == $rootScope.currentUser.Id){
+                return true;
+            }
+        };
+        */
+
+
         $scope.addProgram = function(program) {
+            // console.log('$rootScope.currentUser.Id');
+            //console.log($rootScope.currentUser.Id);
+            program.AuthorId = $rootScope.currentUser.Id;
             DataService.post("programs",program).then(function(response){
                     console.log('response');
                     console.log(response);
@@ -50,5 +64,5 @@
                 });
         };
     };
-    app.controller("MainCtrl",MainCtrl);
+    app.controller("ProgramCtrl",ProgramCtrl);
 }());

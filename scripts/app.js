@@ -9,7 +9,8 @@
     app.config(function($routeProvider, $locationProvider) { //sluzi za pozivanje stranice; routeProvider je jedan od objekata iz ngRoute sistema, ima zadatak da donese rutu u f-ju
 
             $routeProvider
-                .when("/main", {templateUrl: "views/main.html", controller: "MainCtrl"})
+                .when("/main", {templateUrl:"views/main.html", controller:"MainCtrl"})
+                .when("/programs", {templateUrl: "views/programs.html", controller: "ProgramCtrl"})
                 .when("/login", {templateUrl: "views/login.html", controller: "LogInCtrl"})
                 .when("/registration", {templateUrl: "views/registrationView.html", controller: "RegistrationCtrl"})
                 .when("/logout", {templateUrl: "views/login.html", controller: "LogoutCtrl"})

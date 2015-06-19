@@ -1,0 +1,79 @@
+<div ng-controller="MainCtrl" >
+
+    <h2 class="podnaslovi">Programs</h2>
+
+
+    <span ng-show="!add && authenticated" class="text-center form-group">
+        <input type="submit" class="btn btn-success btn-lg pull-right addBtn" value="Add program" ng-click="add=true"/>
+    </span>
+
+    <hr>
+
+    <div ng-show="add">
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input ng-model="program.name" type="name" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea ng_model="program.description" type="description" class="form-control" id="description"> </textarea>
+            </div>
+
+            <button ng-click="addProgram(program)" type="submit" class="btn btn-default">Add</button>
+            <button ng-click="add=false" class="btn btn-default">Cancel</button>
+        </form>
+        </div>
+
+    <!--
+    <ul ng-repeat="program in programs">
+        <li>{{program.Id}} <a href="#/programdetail/{{program.Id}}">Show</a> </li>
+        <li>{{program.Name}}</li>
+        <li>{{program.Description}}</li>
+        <button ng-show="$root.authenticated" ng-click="deleteProgram(program.Id)" class="btn btn-danger">-</button>
+    </ul>
+    -->
+
+    <ol ng-show="!add">
+        <div ng-repeat="program in programs | orderBy: program.Name">
+            <li>
+                <a href="#/programdetail/{{program.Id}}">{{ program.Name}}</a>
+                <span ng-show="authenticated">
+                    <a ng-click="deleteProgram(program.Id)" href>
+                        <img src="images/dell.png">
+                    </a>
+                </span>
+                <p>{{program.Description}}</p>
+
+
+        </div>
+    </ol>
+
+
+<!--
+
+
+<div class="span4">
+              <div class="well">
+                  <h2 translate="TITLE" class="ng-scope">Hello</h2>
+                  <p translate="FOO" class="ng-scope">This is a paragraph.</p>
+              </div>
+              <div ng-controller="Ctrl" class="ng-scope">
+                <button class="btn ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN">english</button>
+                <button class="btn ng-scope" ng-click="changeLanguage('de')" translate="BUTTON_LANG_DE">german</button>
+              </div>
+            </div>
+
+
+
+
+<label ng-repeat="role in roles">
+    <input
+        type = "checkbox"
+        name = "selectedRoles[]"
+        value = "{{ role }}"
+        ng-checked = "selection.indexOf(role) > -1"
+        ng-click = "toggleSelection(role)">
+        {{role}} </label>
+-->
+</div>
