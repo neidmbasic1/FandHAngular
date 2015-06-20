@@ -1,3 +1,31 @@
-<!-- dodati pola dijete pola treninzi-->
+<div ng-controller="MainCtrl">
+    <div class="row">
+        <div class="row">
+            <div class="col-sm-3">
+                <h3 style="text-align:left; float:left"> Top Rated Exercises &nbsp;</h3>
+                <h6 style="margin-top:27px"><span class="label label-info"><a href="#/exercises">All</a></span></h6>
+            </div>
+        </div>
 
-<p>treninzi i dijete</p>
+        <div class="col-sm-3" ng-repeat="exercise in exercises | limitTo:4" style="padding:1px; border-bottom: 1px solid #c4e3f3">
+            <div style="background-color: #ebebeb">
+                <strong><a href="#/exercisedetail/{{exercise.Id}}">{{ exercise.Name}}</a></strong>
+                <br/>{{exercise.Description}}
+            </div>
+        </div>
+
+        <div class="row" style="">
+            <div class="col-sm-3">
+                <h3 style="text-align:left; float:left">Top Rated Diets &nbsp;</h3>
+                <h6 style="margin-top:27px"><span class="label label-info"><a href="#/diets">All</a></span></h6>
+            </div>
+        </div>
+
+        <div class="col-sm-3" ng-repeat="diet in diets | limitTo:4" style="padding:1px; border-bottom: 1px solid #c4e3f3">
+            <div style="background-color: #ebebeb">
+                <strong><a href="#/dietdetail/{{diet.Id}}">{{ diet.Name}}</a></strong>
+                <br/>{{diet.Description}}
+            </div>
+        </div>
+    </div>
+</div>

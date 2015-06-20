@@ -42,3 +42,10 @@ hr {
     margin-right: 28px;
     margin-top: -12px;
 }
+#spinner{ /* da stavimo sliku u sredinu */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -33px;
+    margin-top: -33px;
+}

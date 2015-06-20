@@ -1,7 +1,15 @@
-<div ng-controller="DietsCtrl">
+<div ng-controller="DietsCtrl" >
 
-    <ul ng-repeat="diet in diets">
-        <li>{{diet.Name}}</li>
-        <li>{{diet.Description}}</li>
-    </ul>
+    <h2 class="podnaslovi">Diets</h2>
+
+    <hr>
+
+    <ol>
+        <div ng-repeat="diet in diets | orderBy: diet.Name">
+            <li>
+                <a href="#/dietdetail/{{diet.Id}}">{{ diet.Name}}</a>
+                <p>{{diet.Description}}</p>
+        </div>
+    </ol>
+
 </div>
