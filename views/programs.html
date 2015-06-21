@@ -17,7 +17,16 @@
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-                <textarea ng_model="program.description" type="description" class="form-control" id="description"> </textarea>
+                <textarea ng_model="program.description" type="text" class="form-control" id="description"> </textarea>
+            </div>
+
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon3">&nbsp;Duration</span>
+                <input ng-model="program.duration" type="text" class="form-control" id="duration">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon4">&nbsp;&nbsp;Rating &nbsp;&nbsp;</span>
+                <input ng-model="program.rating" type="text" class="form-control" id="rating">
             </div>
 
             <button ng-click="addProgram(program)" type="submit" class="btn btn-default">Add</button>

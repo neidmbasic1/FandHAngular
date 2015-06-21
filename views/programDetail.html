@@ -4,7 +4,7 @@
 
     <hr>
 
-    <div class="details">
+    <div class="details" ng-show="!edit">
         <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">&nbsp;&nbsp;Name</span>
             <label type="text" class="form-control" aria-describedby="basic-addon1">{{program.Name}}</label>
@@ -27,6 +27,8 @@
         </div>
     </div>
 
+    <br>
+    <br>
 
     <div ng-show="!edit && $root.authenticated" class="text-center form-group">
         <input type="submit" class="btn btn-success btn-lg btn-block" value="Edit" ng-click="edit=true"/>
@@ -39,8 +41,15 @@
             </div>
             <div class="form-group">
                 <label for="description">Description:</label>
-            <textarea ng_model="program.Description" placeholder="{{program.Description}}" type="description" class="form-control" id="description"></textarea>
-
+                <textarea ng_model="program.Description" placeholder="{{program.Description}}" type="description" class="form-control" id="description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="name">Duration:</label>
+                <input ng-model="program.Duration" placeholder="{{program.Duration}}" type="name" class="form-control" id="duration">
+            </div>
+            <div class="form-group">
+                <label for="name">Rating:</label>
+                <input ng-model="program.Rating" placeholder="{{program.Rating}}" type="name" class="form-control" id="rating">
             </div>
 
             <button ng-click="editProgram(program)" type="submit" class="btn btn-default">Save</button>
