@@ -34,20 +34,25 @@
     </ul>
     -->
 
-    <ol ng-show="!add">
-        <div ng-repeat="program in programs | orderBy: program.Name">
-            <li>
-                <a href="#/programdetail/{{program.Id}}">{{ program.Name}}</a>
-                <span ng-show="authenticated">
-                    <a ng-click="deleteProgram(program.Id)" href>
-                        <img src="images/dell.png">
-                    </a>
-                </span>
-                <p>{{program.Description}}</p>
+    <div class="row" ng-show="!add">
+
+        <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4" ng-repeat="program in programs | orderBy: program.Name">
+            <div class="thumbnail bootsnipp-thumb">
+
+
+            <a href="#/programdetail/{{program.Id}}">{{ program.Name}}</a>
+            <span ng-show="authenticated">
+                <a ng-click="deleteProgram(program.Id)" href>
+                    <img src="images/dell.png">
+                </a>
+            </span>
+            <p>{{program.Description}}</p>
+
+    <h6>{{program.Trainings.length}}</h6>
 
 
         </div>
-    </ol>
+    </div>
 
 
 <!--

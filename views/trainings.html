@@ -3,5 +3,11 @@
     <ul ng-repeat="training in trainings">
         <li>{{training.Name}}</li>
         <li>{{training.Description}}</li>
+        <ul ng-repeat="program in programs">
+            <li>{{program.Name}}</li>
+            {{training.Name}}
+            <button ng-click="AddTrainingToProgram(training,program)"> add to program</button>
+        </ul>
     </ul>
+
 </div>

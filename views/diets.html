@@ -3,5 +3,10 @@
     <ul ng-repeat="diet in diets">
         <li>{{diet.Name}}</li>
         <li>{{diet.Description}}</li>
+        <ul ng-repeat="program in programs">
+            <li>{{program.Name}}</li>
+            {{training.Name}}
+            <button ng-click="AddDietToProgram(diet,program)"> add to program</button>
+        </ul>
     </ul>
 </div>

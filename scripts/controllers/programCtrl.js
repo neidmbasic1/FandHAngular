@@ -37,8 +37,9 @@
 
         $scope.addProgram = function(program) {
             // console.log('$rootScope.currentUser.Id');
-            //console.log($rootScope.currentUser.Id);
+            console.log($rootScope.currentUser.Id);
             program.AuthorId = $rootScope.currentUser.Id;
+            console.log(program);
             DataService.post("programs",program).then(function(response){
                     console.log('response');
                     console.log(response);

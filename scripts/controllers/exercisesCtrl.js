@@ -21,6 +21,7 @@
                     $scope.message = "Error fetching data";
                 });
         }
+
     };
     app.controller("ExercisesCtrl",ExercisesCtrl);
 }());
