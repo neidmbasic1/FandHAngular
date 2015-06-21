@@ -18,6 +18,8 @@
                 .when("/exercises", {templateUrl: "views/exercises.html", controller: "ExercisesCtrl" })
                 .when("/diets", {templateUrl: "views/diets.html", controller: "DietsCtrl" })
                 .when("/programdetail/:id", {templateUrl: "views/programDetail.html", controller: "ProgramDetailCtrl" })
+                .when("/exercisedetail/:id", {templateUrl: "views/exerciseDetail.html", controller: "ExerciseDetailCtrl" })
+                .when("/dietdetail/:id", {templateUrl: "views/dietDetail.html", controller: "DietsDetailCtrl" })
                 // .when("/projects", {templateUrl: "views/projectView.html", controller: "ProjectCtrl"})
                 // .when("/persons", {templateUrl: "views/personView.html", controller: "PersonCtrl"})
                 // .when("/teams", {templateUrl: "views/teamView.html", controller: "TeamCtrl"})

@@ -2,7 +2,7 @@
 
     var app = angular.module("FandH");
 
-    var TrainingsCtrl = function($scope,DataService) {
+    var TrainingsCtrl = function($scope,DataService, $rootScope) {
 
         loadTrainings();
         loadPrograms();
@@ -13,12 +13,12 @@
                     console.log(response);
                     $scope.trainings = response.data;
                     console.log(response.data);
-                    //$rootScope.showLoader = false;
+                    $rootScope.showLoader = false;
                 },
                 function(reason){
                     console.log('reason');
                     console.log(reason);
-                    //$rootScope.showLoader = false;
+                    $rootScope.showLoader = false;
                     $scope.message = "Error fetching data";
                 });
         }
