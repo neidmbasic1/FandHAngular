@@ -4,10 +4,27 @@
 
     <hr>
 
-    <div>
-        <p>{{program.Name}}</p>
-        <p>{{program.Description}}</p>
-        <!-- dodati ostale detljae -->
+    <div class="details">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">&nbsp;&nbsp;Name</span>
+            <label type="text" class="form-control" aria-describedby="basic-addon1">{{program.Name}}</label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon2">&nbsp;&nbsp;About</span>
+            <label type="text" class="form-control" aria-describedby="basic-addon1">{{program.Description}}</label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">&nbsp;Duration</span>
+            <label type="text" class="form-control" aria-describedby="basic-addon1">{{program.Duration}}</label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon4">&nbsp;&nbsp;Rating &nbsp;&nbsp;</span>
+            <label type="text" class="form-control" aria-describedby="basic-addon1">{{program.Rating}}</label>
+        </div>
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon5">Trainings</span>
+            <label type="text" class="form-control" aria-describedby="basic-addon1">{{program.Duration}}</label>
+        </div>
     </div>
 
 

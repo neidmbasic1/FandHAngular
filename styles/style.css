@@ -49,3 +49,19 @@ hr {
     margin-left: -33px;
     margin-top: -33px;
 }
+.input-group-addon:first-child {
+    border-right: 0px none;
+    width: 111px;
+}
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 686px;
+}
+.details{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    /*background-color: #b0e0e6;*/
+}
