@@ -9,6 +9,7 @@
 
         <div class="col-sm-3" ng-repeat="exercise in exercises | limitTo:4" style="padding:1px; border-bottom: 1px solid #c4e3f3">
             <div style="background-color: #ebebeb">
+                <img src="{{'http://i.ytimg.com/vi/'+training.Video+'/maxresdefault.jpg'}}"  style="width:304px;height:228px;" >
                 <strong><a href="#/exercisedetail/{{exercise.Id}}">{{ exercise.Name}}</a></strong>
                 <br/>{{exercise.Description}}
             </div>

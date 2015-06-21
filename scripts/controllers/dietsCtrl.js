@@ -65,16 +65,16 @@
     };
     app.controller("DietsCtrl",DietsCtrl);
 
-    var DietsDetailsCtrl = function($scope,DataService,$rootScope) {
+    var DietsDetailsCtrl = function($scope,DataService,$routeParams,$rootScope) {
 
         var id = $routeParams.id;
-        loadDiets(id);
-        function loadDiets() {
+        loadDiet(id);
+        function loadDiet(id) {
             $rootScope.showLoader = true;
             DataService.get("diets",id).then(function(response){
                     console.log('response');
                     console.log(response);
-                    $scope.program = response.data;
+                    $scope.diet = response.data;
                     console.log(response.data);
                     $rootScope.showLoader = false;
                 },
