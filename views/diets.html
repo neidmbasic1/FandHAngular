@@ -10,10 +10,11 @@
                 <a href="#/dietdetail/{{diet.Id}}">{{ diet.Name}}</a>
                 <p>{{diet.Description}}</p>
             </li>
-            <ul ng-repeat="program in programs">
-                <li>{{program.Name}}</li>
+            <button ng-show="!addToProgram" ng-click="addToProgram = true">Add to program</button>
+            <ul ng-show="addToProgram" ng-repeat="program in programs">
+               <a ng-click="AddDietToProgram(diet,program)"> <li>{{program.Name}}</li>
                 {{training.Name}}
-                <button ng-click="AddDietToProgram(diet,program)"> add to program</button>
+                </a>
             </ul>
         </div>
     </ol>
