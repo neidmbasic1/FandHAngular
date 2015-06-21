@@ -26,9 +26,8 @@
         }
 
         $scope.ifAuthor = function(program) {
-            console.log(program.AuthorId);
-            if($rootScope.currentUser) {
-                if(program.AuthorId == $rootScope.currentUser.Id){
+            if($rootScope.currentUser && program.Author) {
+                if(program.Author.Id == $rootScope.currentUser.Id){
                     return true;
                 }
             }
