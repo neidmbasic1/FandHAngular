@@ -42,14 +42,13 @@
 
 
             <a href="#/programdetail/{{program.Id}}">{{ program.Name}}</a>
-            <span ng-show="authenticated">
+            <span ng-show="ifAuthor(program)">
                 <a ng-click="deleteProgram(program.Id)" href>
                     <img src="images/dell.png">
                 </a>
             </span>
             <p>{{program.Description}}</p>
-
-    <h6>{{program.Trainings.length}}</h6>
+                <h6>{{program.Trainings.length}}</h6>
 
         </div>
     </div>
