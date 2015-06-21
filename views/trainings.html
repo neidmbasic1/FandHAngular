@@ -1,13 +1,19 @@
 <div ng-controller="TrainingsCtrl">
 
-    <ul ng-repeat="training in trainings">
-        <li>{{training.Name}}</li>
-        <li>{{training.Description}}</li>
-        <ul ng-repeat="program in programs">
-            <li>{{program.Name}}</li>
-            {{training.Name}}
-            <button ng-click="AddTrainingToProgram(training,program)"> add to program</button>
-        </ul>
-    </ul>
 
+    <h2 class="podnaslovi">Trainings</h2>
+
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4" ng-repeat="training in trainings">
+            <div class="thumbnail bootsnipp-thumb">
+                <a href="#/trainingdetail/{{training.Id}}">{{ training.Name}}</a>
+                <p>{{training.Description}}</p>
+                <button ng-show="!addToProgram" ng-click="addToProgram = true">Add to program</button>
+                <ul ng-show="addToProgram" ng-repeat="program in programs">
+                    <a ng-click="AddTrainingToProgram(training,program)">{{program.Name}}</a>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>

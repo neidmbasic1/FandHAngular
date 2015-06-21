@@ -1,7 +1,15 @@
 <div ng-controller="ExercisesCtrl">
+    <h2 class="podnaslovi">Exercises</h2>
 
-    <ul ng-repeat="exercise in exercises">
-        <li>{{exercise.Name}}</li>
-        <li>{{exercise.Description}}</li>
-    </ul>
+    <hr>
+    <div class="row">
+        <div class="col-sm-12 col-xs-12 col-md-4 col-lg-4" ng-repeat="exercise in exercises">
+            <div class="thumbnail bootsnipp-thumb">
+                <a href="#/programdetail/{{exercise.Id}}">{{ exercise.Name}}</a>
+                <p>{{exercise.Description}}</p>
+            </div>
+        </div>
+    </div>
+
+
 </div>

@@ -5,15 +5,15 @@
 
     var MainCtrl = function($scope,DataService, $rootScope) {
 
-        loadExercises();
+        loadTrainings();
         loadDiets();
 
-        function loadExercises() {
+        function loadTrainings() {
             $rootScope.showLoader = true;
-            DataService.list("exercises").then(function(response){
+            DataService.list("trainings").then(function(response){
                     console.log('response');
                     console.log(response);
-                    $scope.exercises = response.data;
+                    $scope.trainings = response.data;
                     console.log(response.data);
                     $rootScope.showLoader = false;
                 },

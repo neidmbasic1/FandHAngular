@@ -1,20 +1,24 @@
 <div ng-controller="MainCtrl">
-    <div class="row">
+    <div>
+        <div class="row">
         <div class="row">
             <div class="col-sm-3">
-                <h3 style="text-align:left; float:left"> Top Rated Exercises &nbsp;</h3>
-                <h6 style="margin-top:27px"><span class="label label-info"><a href="#/exercis">All</a></span></h6>
+                <h3 style="text-align:left; float:left"> Top Rated Trainings &nbsp;</h3>
+                <h6 style="margin-top:27px"><span class="label label-info"><a href="#/trainings">All</a></span></h6>
             </div>
         </div>
 
-        <div class="col-sm-3" ng-repeat="exercise in exercises | limitTo:4" style="padding:1px; border-bottom: 1px solid #c4e3f3">
+
+        <div class="col-sm-3" ng-repeat="training in trainings | limitTo:4" style="padding:1px; border-bottom: 1px solid #c4e3f3">
             <div style="background-color: #ebebeb">
-                <img src="{{'http://i.ytimg.com/vi/'+training.Video+'/maxresdefault.jpg'}}"  style="width:304px;height:228px;" >
-                <strong><a href="#/exercisedetail/{{exercise.Id}}">{{ exercise.Name}}</a></strong>
-                <br/>{{exercise.Description}}
+                <img src="{{'http://i.ytimg.com/vi/'+training.Video+'/maxresdefault.jpg'}}"  style="width:304px;height:228px;">
+                <strong><a href="#/trainingdetail/{{training.Id}}">{{ training.Name}}</a></strong>
+                <br/>{{training.Description}}
             </div>
         </div>
+        </div>
 
+<div class="row">
         <div class="row" style="">
             <div class="col-sm-3">
                 <h3 style="text-align:left; float:left">Top Rated Diets &nbsp;</h3>
@@ -22,11 +26,13 @@
             </div>
         </div>
 
+
         <div class="col-sm-3" ng-repeat="diet in diets | limitTo:4" style="padding:1px; border-bottom: 1px solid #c4e3f3">
             <div style="background-color: #ebebeb">
                 <strong><a href="#/dietdetail/{{diet.Id}}">{{ diet.Name}}</a></strong>
                 <br/>{{diet.Description}}
             </div>
+        </div>
         </div>
     </div>
 </div>
